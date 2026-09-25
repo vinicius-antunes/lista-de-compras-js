@@ -40,6 +40,8 @@ Praticar a construção de páginas dinâmicas com JavaScript, separando respons
 
 ```text
 lista-de-compras-js/
+├── docs/
+│   └── documentacao-javascript.md
 ├── img/
 │   ├── bag.png
 │   ├── delete.svg
@@ -54,73 +56,15 @@ lista-de-compras-js/
 └── README.md
 ```
 
-## 🧩 Funções JavaScript
+## 📘 Documentação do JavaScript
 
-### `criarItemDaLista()`
+As explicações sobre funções, parâmetros, retornos, DOM, eventos e nomenclaturas foram separadas do código principal.
 
-Cria um novo item com checkbox, nome do produto, data e horário.
-
-- **Parâmetros:** não possui;
-- **Retorno:** um elemento `<li>` pronto para ser inserido na página;
-- **Retorno alternativo:** `undefined` quando o campo está vazio.
-
-### `gerarDiaDaSemana()`
-
-Obtém a data e o horário atuais no formato brasileiro.
-
-- **Parâmetros:** não possui;
-- **Retorno:** uma string com dia da semana, data e horário.
-
-Exemplo:
-
-```text
-sexta-feira (25/09/2026) as 12:30
-```
-
-### `verificarListaVazia(listaDeCompras)`
-
-Verifica se existem elementos `<li>` na lista e controla a exibição da mensagem **Nenhum item adicionado**.
-
-- **Parâmetro:** `listaDeCompras`, elemento HTML que representa a lista;
-- **Retorno:** não possui.
-
-## 📚 Nomenclaturas e conceitos praticados
-
-| Recurso | O que é e como foi utilizado |
-|---|---|
-| `const` | Declara referências que não serão reatribuídas. Foi utilizada para armazenar elementos do DOM e resultados das funções. |
-| `let` | Declara uma variável que pode mudar. Foi utilizada no contador dos checkboxes. |
-| `import` e `export` | Permitem dividir o código em módulos e compartilhar funções entre arquivos. |
-| DOM | Representação do documento HTML que pode ser acessada e alterada pelo JavaScript. |
-| `getElementById()` | Localiza um elemento pelo atributo `id`. |
-| `querySelector()` | Localiza o primeiro elemento correspondente a um seletor CSS. |
-| `querySelectorAll()` | Localiza todos os elementos correspondentes e retorna uma coleção. |
-| `createElement()` | Cria um novo elemento HTML por meio do JavaScript. |
-| `addEventListener()` | Observa eventos, como o clique no botão ou no checkbox. |
-| Arrow Function | Forma reduzida de escrever uma função, utilizada como callback do clique no botão. |
-| Callback | Função executada depois que determinado evento acontece. |
-| `preventDefault()` | Impede o comportamento padrão do formulário. |
-| `appendChild()` | Adiciona um elemento como filho de outro elemento no DOM. |
-| `.value` | Acessa o conteúdo digitado em um campo de formulário. |
-| `.trim()` | Remove espaços do início e do final de uma string. |
-| `.innerText` | Define ou acessa o texto visível de um elemento. |
-| `.innerHTML` | Insere conteúdo textual ou HTML dentro de um elemento. |
-| `.checked` | Informa se um checkbox está marcado ou desmarcado. |
-| `Date` | Objeto nativo utilizado para trabalhar com datas e horários. |
-| Template Literal | String escrita com crases que permite inserir valores usando `${}`. |
-| `return` | Encerra uma função e pode devolver um resultado. |
+<a href="./docs/documentacao-javascript.md">
+  <img src="https://img.shields.io/badge/Ver_documentação-8A2BE2?style=for-the-badge&logo=javascript&logoColor=white" alt="Documentação do JavaScript">
+</a>
 
 ## ▶️ Como executar
-
-### Pelo GitHub Pages
-
-Quando a publicação estiver ativada, acesse:
-
-```text
-https://vinicius-antunes.github.io/lista-de-compras-js/
-```
-
-### No computador
 
 1. Clone o repositório:
 
