@@ -1,36 +1,149 @@
+# 🛒 Lista de Compras com JavaScript
 
-![Descricao da sua imagem](https://imgur.com/C8TfWXc.png)
+Aplicação web desenvolvida durante meus estudos de **JavaScript e manipulação do DOM**. O projeto permite criar uma lista de compras dinâmica, marcar itens como comprados e registrar automaticamente a data e o horário de inclusão.
 
-# Titulo do projeto
+<p align="center">
+  <img src="./img/bag.png" alt="Ilustração de uma sacola de compras" width="160">
+</p>
 
-Aplicação web de lista de compras para o curso de construção de páginas dinâmicas com JavaScript.
+## 🎯 Objetivo do projeto
 
-## 🔨 Funcionalidades do projeto
+Praticar a construção de páginas dinâmicas com JavaScript, separando responsabilidades em diferentes módulos e manipulando elementos HTML por meio do DOM.
 
-A aplicação permite inserir itens em uma lista de forma dinâmica, permitindo a exclusão e edição dos mesmos. Os itens terão o nome e também a data e horário que foram criados. Também é possível selecionar um checkbox para informar que o item foi comprado.
+## ⚙️ Como funciona
 
-![Inserção no campo de digitação do valor ração de gato, após, é clicado no botão de edição, onde é aberto um popup para digitar o novo do nome item, que foi digitado ração de cachorro. Em seguida, é clicado no botão de exclusão, e o item é excluído.](https://imgur.com/isPj7Xf.gif)
+1. O usuário digita o nome de um produto no campo de texto.
+2. Ao clicar em **Salvar item**, o JavaScript verifica se o campo foi preenchido.
+3. Um novo elemento é criado e adicionado à lista.
+4. O projeto registra o dia da semana, a data e o horário de criação.
+5. O checkbox permite marcar ou desmarcar o item como comprado.
+6. A mensagem de lista vazia aparece apenas quando não existem produtos cadastrados.
 
-## ✔️ Técnicas e tecnologias utilizadas
+## ✨ Principais funcionalidades
 
-As técnicas e tecnologias utilizadas pra isso são:
+- Adição dinâmica de itens;
+- Validação do campo vazio;
+- Marcação de itens como comprados;
+- Exibição de data, horário e dia da semana;
+- Controle automático da mensagem de lista vazia;
+- Interface responsiva;
+- Organização do JavaScript em módulos.
 
-- `HTML`: criação dos elementos da tela;
-- `CSS`: estilização da aplicação;
-- `JavaScript`: construção de elementos dinâmicos através da manipulação do DOM.
+## 🛠️ Tecnologias utilizadas
 
-## 📁 Acesso ao projeto
+- **HTML5:** estrutura da aplicação;
+- **CSS3:** estilização, responsividade e identidade visual;
+- **JavaScript:** regras e interações da aplicação;
+- **Git e GitHub:** versionamento e publicação do código.
 
-Você pode [acessar o código fonte do projeto inicial](https://github.com/alura-cursos/3801-javascript-para-web/tree/projeto-base) ou [baixá-lo](https://github.com/alura-cursos/3801-javascript-para-web/archive/refs/heads/projeto-base.zip).
+## 📁 Estrutura do projeto
 
-## 🛠️ Abrir e rodar o projeto
+```text
+lista-de-compras-js/
+├── img/
+│   ├── bag.png
+│   ├── delete.svg
+│   └── edit.svg
+├── scripts/
+│   ├── criaritemDaLista.js
+│   ├── gerarDiaDaSemana.js
+│   └── verificarListaVazia.js
+├── index.html
+├── index.js
+├── styles.css
+└── README.md
+```
 
-Após baixar o projeto, você pode abrir com o Visual Studio Code. Para isso, no menu superior, clique em:
+## 🧩 Funções JavaScript
 
-- **File** > **Open Folder** (ou alguma opção similar)
-- Procure o local onde o projeto está e o selecione (Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo)
-- Por fim clique em OK
+### `criarItemDaLista()`
 
-Ao finalizar esses passos, você pode executar a aplicação com a extensão Live Server 🏆 
+Cria um novo item com checkbox, nome do produto, data e horário.
 
+- **Parâmetros:** não possui;
+- **Retorno:** um elemento `<li>` pronto para ser inserido na página;
+- **Retorno alternativo:** `undefined` quando o campo está vazio.
 
+### `gerarDiaDaSemana()`
+
+Obtém a data e o horário atuais no formato brasileiro.
+
+- **Parâmetros:** não possui;
+- **Retorno:** uma string com dia da semana, data e horário.
+
+Exemplo:
+
+```text
+sexta-feira (25/09/2026) as 12:30
+```
+
+### `verificarListaVazia(listaDeCompras)`
+
+Verifica se existem elementos `<li>` na lista e controla a exibição da mensagem **Nenhum item adicionado**.
+
+- **Parâmetro:** `listaDeCompras`, elemento HTML que representa a lista;
+- **Retorno:** não possui.
+
+## 📚 Nomenclaturas e conceitos praticados
+
+| Recurso | O que é e como foi utilizado |
+|---|---|
+| `const` | Declara referências que não serão reatribuídas. Foi utilizada para armazenar elementos do DOM e resultados das funções. |
+| `let` | Declara uma variável que pode mudar. Foi utilizada no contador dos checkboxes. |
+| `import` e `export` | Permitem dividir o código em módulos e compartilhar funções entre arquivos. |
+| DOM | Representação do documento HTML que pode ser acessada e alterada pelo JavaScript. |
+| `getElementById()` | Localiza um elemento pelo atributo `id`. |
+| `querySelector()` | Localiza o primeiro elemento correspondente a um seletor CSS. |
+| `querySelectorAll()` | Localiza todos os elementos correspondentes e retorna uma coleção. |
+| `createElement()` | Cria um novo elemento HTML por meio do JavaScript. |
+| `addEventListener()` | Observa eventos, como o clique no botão ou no checkbox. |
+| Arrow Function | Forma reduzida de escrever uma função, utilizada como callback do clique no botão. |
+| Callback | Função executada depois que determinado evento acontece. |
+| `preventDefault()` | Impede o comportamento padrão do formulário. |
+| `appendChild()` | Adiciona um elemento como filho de outro elemento no DOM. |
+| `.value` | Acessa o conteúdo digitado em um campo de formulário. |
+| `.trim()` | Remove espaços do início e do final de uma string. |
+| `.innerText` | Define ou acessa o texto visível de um elemento. |
+| `.innerHTML` | Insere conteúdo textual ou HTML dentro de um elemento. |
+| `.checked` | Informa se um checkbox está marcado ou desmarcado. |
+| `Date` | Objeto nativo utilizado para trabalhar com datas e horários. |
+| Template Literal | String escrita com crases que permite inserir valores usando `${}`. |
+| `return` | Encerra uma função e pode devolver um resultado. |
+
+## ▶️ Como executar
+
+### Pelo GitHub Pages
+
+Quando a publicação estiver ativada, acesse:
+
+```text
+https://vinicius-antunes.github.io/lista-de-compras-js/
+```
+
+### No computador
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/vinicius-antunes/lista-de-compras-js.git
+```
+
+2. Abra a pasta no Visual Studio Code.
+3. Execute o `index.html` utilizando a extensão **Live Server**.
+
+> O uso de um servidor local é recomendado porque o projeto utiliza módulos JavaScript.
+
+## 🚧 Melhorias futuras
+
+- Editar itens adicionados;
+- Excluir itens da lista;
+- Salvar os dados no `localStorage`;
+- Criar filtros para itens pendentes e concluídos.
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Vinicius Antunes** durante seus estudos de desenvolvimento web.
+
+<a href="https://github.com/vinicius-antunes">
+  <img src="https://img.shields.io/badge/GitHub-8A2BE2?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
